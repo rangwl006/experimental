@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  hello-world:
+    image: ${DOCKER_IMAGE}:${DOCKER_TAG}
+    environment:
+      - INSTALL_PATH=/builder/install
+    volumes:
+      - ./:/builder:rw
+    working_dir: /builder
+    entrypoint: /builder/scripts/run-all.sh
