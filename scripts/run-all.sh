@@ -1,5 +1,16 @@
 #!/bin/bash
 
+function clean_folder()
+{
+  for FILE in ${INSTALL_PATH}; do
+    if [[ -d $FILE ]]; then
+      rm -rf $FILE
+    fi
+  done
+}
+
+clean_folder
+
 cmake build -S /builder -B /builder/build
 cmake --build /builder/build
 cmake --install /builder/build

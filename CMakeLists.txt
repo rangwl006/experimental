@@ -12,4 +12,4 @@ set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install/${CMAKE_SYSTEM_PROCESSOR})
 add_executable(testProject main.cpp)
 install(TARGETS testProject)
 
-add_subdirectory(test)
+add_subdirectory(01_PolicyBasedClassDesign)

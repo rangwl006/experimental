@@ -1,0 +1,2 @@
+add_library(PolicyBasedClassDesign CreatorPolicies.cpp SmartPtr.cpp)
+target_include_directories(PolicyBasedClassDesign PUBLIC ${CMAKE_SOURCE_DIR}/01_PolicyBasedClassDesign/inc)

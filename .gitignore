@@ -3,3 +3,6 @@ build
 
 # keep all gitkeeps
 !*/.gitkeep
+
+# ignore .vscode folder
+.vscode

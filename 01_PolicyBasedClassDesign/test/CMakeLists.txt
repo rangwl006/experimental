@@ -1,0 +1,4 @@
+add_executable(PolicyDesignTestProgram policy-design-test.cpp)
+target_link_libraries(PolicyDesignTestProgram PUBLIC PolicyBasedClassDesign)
+target_include_directories(PolicyDesignTestProgram PUBLIC ${CMAKE_SOURCE_DIR}/01_PolicyBasedClassDesign/inc)
+install(TARGETS PolicyDesignTestProgram)
