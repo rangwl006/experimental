@@ -19,8 +19,10 @@ echo "START: EXECUTION OF ALL BUILT PROGRAMS"
 
 for FILE in ${INSTALL_PATH}/*/*/*; do
   if [[ -x "$FILE" ]]; then
+    echo "##### STARTING PROGRAM: $FILE"
     "$FILE"
-  fi
+    echo "##### END OF PROGRAM: $FILE"
+fi
 done
 
 echo "ENDED: EXECUTION OF ALL BUILT PROGRAMS"

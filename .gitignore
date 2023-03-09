@@ -6,3 +6,9 @@ build
 
 # ignore .vscode folder
 .vscode
+
+# ignore .idea file
+.idea
+
+#ignore
+install/aarch64

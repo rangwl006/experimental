@@ -1,0 +1,2 @@
+add_library(PartialTemplateSpecialization PartialTemplateSpecialization.cpp)
+target_include_directories(PartialTemplateSpecialization PUBLIC ${CMAKE_SOURCE_DIR}/02_PartialTemplateSpecialization/inc)
