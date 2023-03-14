@@ -9,6 +9,7 @@ message(INFO "System processor: ${CMAKE_SYSTEM_PROCESSOR}")
 set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install/${CMAKE_SYSTEM_PROCESSOR})
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
+find_package( CURL REQUIRED )
 # Add the executable
 add_subdirectory(00_Dump)
 add_subdirectory(01_PolicyBasedClassDesign)

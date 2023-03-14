@@ -7,5 +7,6 @@ services:
       - INSTALL_PATH=/builder/install
     volumes:
       - ./:/builder:rw
+      - ./install:/builder/install:rw
     working_dir: /builder
     entrypoint: /builder/scripts/run-all.sh
