@@ -32,7 +32,7 @@ int main()
     constexpr auto arraySize1 = size;
     std::cout << arraySize1 << std::endl;
 
-    std::array<int, pow(3, size)> arr; // needs to know value at compile time, hence constexpr
-    int arr_raw[pow(3,size)] {}; // needs to know value at compile time, hence constexpr
+    // std::array<int, pow(3, size)> arr; // needs to know value at compile time, hence constexpr
+    // int arr_raw[pow(3,size)] {}; // needs to know value at compile time, hence constexpr
     return 0;
 }

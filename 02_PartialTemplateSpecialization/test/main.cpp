@@ -4,15 +4,11 @@
 
 int main()
 {
-    std::cout << "### Start of program" << std::endl;
+    int x = 10;
+    int y = 9;
+    // using fully-specialized compare function
+    std::cout << techniques::compare(1.0, 2.0) << std::endl;
+    std::cout << techniques::compare(10, 2) << std::endl;
 
-    int a = 10;
-
-    std::cout << "long int (max) " << std::numeric_limits<long int>::max() << std::endl;
-    std::cout << " int     (max) " << std::numeric_limits<int>::max() << std::endl;
-    
-//    long x = techniques::compile_time_assertions::safe_reinterpret_cast<long>(a);
-
-    std::cout << "### End of program" << std::endl;
     return 0;
 }

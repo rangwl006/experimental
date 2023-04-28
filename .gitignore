@@ -10,5 +10,8 @@ build
 # ignore .idea file
 .idea
 
+#ignore CLion build folder
+cmake-build-debug
+
 #ignore
 install/aarch64

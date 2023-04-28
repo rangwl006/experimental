@@ -1,23 +1,29 @@
 #pragma once
 
 #include <iostream>
-#include <cassert>
-
-#define STATIC_CHECK(expr) { char unnamed[expr? 1 : 0]; }
 
 namespace techniques
 {
 
-    namespace compile_time_assertions
+    template<typename T>
+    bool compare(const T&& p1, const T&& p2)
     {
-        // TODO: needs fixing
-        template<
-          class To,
-          class From
-        > To safe_reinterpret_cast(From from)
-        {
-            STATIC_CHECK(sizeof(From) <= sizeof(To));
-            return reinterpret_cast<To>(from);
-        };
-    }
+        std::cout << "using template" << std::endl;
+        return p1 > p2 ? true : false;
+    };
+    // explicit template specialization
+    template<> // indicate specialization with empty angle brackets
+    bool compare(const int&& p1, const int&& p2)
+    {
+        std::cout << "using specialized template for integers" << std::endl;
+        return p1 > p2 ? true : false;
+    };
+
+    // explicit template specialization
+    template<> // indicate specialization with empty angle brackets
+    bool compare(const double&& p1, const double&& p2)
+    {
+        std::cout << "using specialized template for doubles" << std::endl;
+        return p1 > p2 ? true : false;
+    };
 }

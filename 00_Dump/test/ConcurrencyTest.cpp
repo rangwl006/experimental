@@ -37,7 +37,7 @@ public:
         curl_easy_setopt(m_curlHandle.get(), CURLOPT_WRITEDATA, &readBuffer);
         CURLcode res = curl_easy_perform(m_curlHandle.get());
 
-        std::ofstream out("/builder/doc.html" );
+        std::ofstream out("/builder/doc.json" );
         out << readBuffer;
 //        std::cout << readBuffer << std::endl;
     }
@@ -54,8 +54,7 @@ int main()
 {
     CurlWrapper c;
 //    c.PullContent("www.aldo.com");
-    c.PullContent("https://www.sunteccity.com.sg");
-//    c.PullContent("www.astons.com.sg");
+    c.PullContent("https://data.gov.sg/api/action/datastore_search?resource_id=68289dd4-e9d1-41cf-afe6-b093d04b60af&limit=5");
 //    c.PullContent("www.allkpop.com");
 
     return 0;
